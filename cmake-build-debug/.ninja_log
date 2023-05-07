@@ -1,0 +1,11 @@
+# ninja log v5
+3	1033	7051870691778367	CMakeFiles/SearchSystem.dir/DirectoryParser/DirectoryParser.cpp.obj	1b2d8b2e3eff0461
+1	57	7051946482774823	build.ninja	fc6ec4a034706f6a
+2	560	7051903294054679	CMakeFiles/SearchSystem.dir/main.cpp.obj	f1d57a166f5a56f8
+4	1045	7051900588779099	CMakeFiles/SearchSystem.dir/modules/DirectoryParser/DirectoryParser.cpp.obj	9907781553d0950a
+2	1056	7051869662744597	CMakeFiles/SearchSystem.dir/FileExplorer/FileExplorer.cpp.obj	2043129009e87d81
+5	427	7051880126285648	CMakeFiles/SearchSystem.dir/modules/SearchSystem.cpp.obj	96993bb523cf3c6d
+560	669	7051903295125527	SearchSystem.exe	fc3971a5d3252844
+5	407	7051900582404852	CMakeFiles/SearchSystem.dir/modules/SearchSystem/SearchSystem.cpp.obj	4449b5415ac9b88a
+3	471	7051900583047211	CMakeFiles/SearchSystem.dir/utils/transformMap.cpp.obj	7c822d1f9ab28e2e
+3	450	7051900774595121	utils/CMakeFiles/UtilsLib.dir/transformMap.cpp.obj	203d199e18960e1c

@@ -1,0 +1,16 @@
+---
+BasedOnStyle: Google
+AccessModifierOffset: 0
+AlignAfterOpenBracket: BlockIndent
+AlignEscapedNewlines: DontAlign
+AllowShortBlocksOnASingleLine: Empty
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+BinPackArguments: false
+BinPackParameters: false
+BreakStringLiterals: false
+ColumnLimit: 120
+IndentAccessModifiers: true
+InsertTrailingCommas: Wrapped
+LambdaBodyIndentation: OuterScope
+NamespaceIndentation: All

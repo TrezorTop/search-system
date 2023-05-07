@@ -1,0 +1,3 @@
+C:/Users/Andrey/Desktop/cpp/SearchSystem/cmake-build-debug/CMakeFiles/SearchSystem.dir
+C:/Users/Andrey/Desktop/cpp/SearchSystem/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Andrey/Desktop/cpp/SearchSystem/cmake-build-debug/CMakeFiles/rebuild_cache.dir
