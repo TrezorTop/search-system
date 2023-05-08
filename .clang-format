@@ -1,4 +1,3 @@
----
 BasedOnStyle: Google
 AccessModifierOffset: 0
 AlignAfterOpenBracket: BlockIndent
@@ -12,5 +11,6 @@ BreakStringLiterals: false
 ColumnLimit: 120
 IndentAccessModifiers: true
 InsertTrailingCommas: Wrapped
-LambdaBodyIndentation: OuterScope
+LambdaBodyIndentation: Signature
 NamespaceIndentation: All
+TabWidth: 2

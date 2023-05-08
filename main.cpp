@@ -20,8 +20,29 @@ int main() {
   SearchSystem searchSystem;
   searchSystem.SetDocumentsMap(documentsMap);
 
-  for (auto const& [key, value] : searchSystem.GetDocumentsMap()) {
-    std::cout << value.value << '\n';
+  while (true) {
+    std::cout << "Enter the search string" << '\n';
+
+    std::string query;
+    std::getline(std::cin, query);
+
+    if (query.empty()) {
+      std::cerr << "Error: invalid query" << '\n';
+      continue;
+    }
+
+    std::vector<std::pair<std::string, Document>> result = searchSystem.GetDocumentsWithQuery(query);
+
+    if (!result.size()) {
+      std::cout << "No documents containing the given string found" << '\n';
+      continue;
+    }
+
+    std::cout << "Result: " << '\n';
+    for (auto& document : result) {
+      std::cout << document.first << " [relevance: " << document.second.relevance << "]" << '\n';
+    }
+    std::cout << '\n';
   }
 
   return 0;
