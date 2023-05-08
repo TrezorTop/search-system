@@ -20,6 +20,8 @@ typedef std::map<std::string, Document> DocumentsMap;
 class SearchSystem {
   private:
     DocumentsMap documentsMap;
+    template <typename T>
+    T GetSubStrings(std::string string);
 
   public:
     DocumentsMap GetDocumentsMap();
