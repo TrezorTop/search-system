@@ -25,10 +25,9 @@ T SearchSystem::GetSubStrings(std::string string) {
 }
 
 std::vector<std::pair<std::string, Document>> SearchSystem::GetDocumentsWithQuery(const std::string& query) {
-  auto subStrings = this->GetSubStrings<std::unordered_set<std::string>>(query);
-
   DocumentsMap foundDocumentsMap;
 
+  auto subStrings = this->GetSubStrings<std::unordered_set<std::string>>(query);
   // since we are not sorting wordIdfMap and we only need to look up elements by key, we can use a std::unordered_map
   // instead of a std::map for potentially better performance
   std::unordered_map<std::string, Word> wordIdfMap;
@@ -78,9 +77,14 @@ std::vector<std::pair<std::string, Document>> SearchSystem::GetDocumentsWithQuer
   // this will move the elements from foundDocumentsMap into output, which can be more efficient than copying them
   std::move(foundDocumentsMap.begin(), foundDocumentsMap.end(), std::back_inserter(output));
 
-  std::sort(output.begin(), output.end(), [](const auto& a, const auto& b) {
-    return a.second.relevance > b.second.relevance;
+  const double EPSILON = 1e-6;
+
+  std::sort(output.begin(), output.end(), [&EPSILON](const auto& a, const auto& b) {
+    return std::abs(a.second.relevance - b.second.relevance) < EPSILON;
   });
 
   return output;
+}
+std::unordered_map<std::string, Word> SearchSystem::CalculateIdfForEachWord() {
+  return std::unordered_map<std::string, Word>();
 }

@@ -3,6 +3,7 @@
 
 #include <map>
 #include <string>
+#include <unordered_map>
 #include <vector>
 
 struct Document {
@@ -22,6 +23,7 @@ class SearchSystem {
     DocumentsMap documentsMap;
     template <typename T>
     T GetSubStrings(std::string string);
+    std::unordered_map<std::string, Word> CalculateIdfForEachWord();
 
   public:
     DocumentsMap GetDocumentsMap();
